@@ -1,25 +1,67 @@
-# Node.js ve MongoDB
+# Blog Web Uygulaması - Node.js ve MongoDB
 
-Bu proje, Node.js ve MongoDB kullanarak bir kullanıcı veritabanı oluşturmak, kullanıcı eklemek, güncellemek ve silmek için bir REST API içerir.
+Bu proje, Node.js ve MongoDB kullanarak basit bir blog web uygulaması geliştirmek için hazırlanmıştır. Kullanıcılar blog yazıları oluşturabilir, güncelleyebilir, silebilir ve diğer kullanıcıların yazılarını görüntüleyebilir. Kullanıcılar ayrıca sisteme kayıt olabilir ve giriş yaparak kimlik doğrulaması yapabilirler.
 
 ## Proje İçeriği
 
-- **Kullanıcı ekleme: İsim, bölüm ve maaş bilgileriyle yeni bir kullanıcı ekleme:** <br><br><br> **POST**
-`http://localhost:3000/add-user`
-<br><br><br>
-![Add Image](https://github.com/IzzetMustafaoglu/mongodbAndNodeJS/blob/main/images/add.png)
-<br><br><br>
-- **MongoDB Compass** <br><br><br>
-![Database Image](https://github.com/IzzetMustafaoglu/mongodbAndNodeJS/blob/main/images/database.png)
-- **Kullanıcı maaşını güncelleme: Belirtilen kullanıcının maaş bilgisini güncelleme:** <br><br><br> **PUT**
-`http://localhost:3000/update-salary`
-<br><br><br>
-![Update Image](https://github.com/IzzetMustafaoglu/mongodbAndNodeJS/blob/main/images/update.png)
-<br><br><br>
-- **Kullanıcı silme: Verilen kullanıcıyı veritabanından silme:**<br><br><br> **DELETE **
-`http://localhost:3000/delete-user`
-<br><br><br>
-![Delete Image](https://github.com/IzzetMustafaoglu/mongodbAndNodeJS/blob/main/images/Delete.png)
-<br><br><br>
-- **MongoDB Compass Finally** <br><br><br>
-![Database Image](https://github.com/IzzetMustafaoglu/mongodbAndNodeJS/blob/main/images/database_finally.png)
+Bu proje, aşağıdaki ana bileşenleri içermektedir:
+
+### 1. **Kullanıcı Yönetimi**
+- **Kayıt Olma (Sign Up)**: Kullanıcılar sisteme kayıt olabilir.
+- **Giriş Yapma (Login)**: Kullanıcılar, kullanıcı Adı ve şifre ile giriş yapabilir.
+- **JWT (JSON Web Token) ile Kimlik Doğrulama**: Giriş yapan kullanıcılar için token tabanlı kimlik doğrulama sağlanır.
+
+### 2. **Blog Yönetimi**
+- **Blog Yazıları Oluşturma**: Kullanıcılar yeni blog yazıları oluşturabilir.
+- **Blog Yazıları Güncelleme**: Kullanıcılar kendi yazılarını güncelleyebilir.
+- **Blog Yazıları Silme**: Kullanıcılar kendi yazılarını silebilir.
+- **Blog Yazılarını Listeleme**: Tüm blog yazıları ana sayfada görüntülenebilir.
+
+### 3. **Teknolojiler ve Araçlar**
+- **Node.js**: Uygulama sunucusu.
+- **Express.js**: Web framework'ü.
+- **MongoDB**: Veritabanı.
+- **Mongoose**: MongoDB ile bağlantı ve veri modelleri için kullanılan kütüphane.
+- **JWT (JSON Web Token)**: Kullanıcı kimlik doğrulama için kullanılır.
+- **Bcrypt.js**: Şifre güvenliği için şifreleri hash'lemek amacıyla kullanılır.<br><br>
+
+### **Register** <br>
+
+`http://localhost:5000/register`
+<br><br>
+![Register Image](https://github.com/IzzetMustafaoglu/mongodbAndNodeJS/blob/main/images/regsiter.png)
+<br>
+### **Login** <br>
+`http://localhost:5000/login`
+<br><br>
+![Database Image](https://github.com/IzzetMustafaoglu/mongodbAndNodeJS/blob/main/images/login.png)
+<br>
+### **Blogs** <br>
+`http://localhost:5000/home`
+<br><br>
+![Database Image](https://github.com/IzzetMustafaoglu/mongodbAndNodeJS/blob/main/images/blogs.png)
+<br>
+### **Add Blogs** <br>
+`http://localhost:5000/home`
+<br><br>
+![Database Image](https://github.com/IzzetMustafaoglu/mongodbAndNodeJS/blob/main/images/add_blog.png)
+<br>
+### **My Blogs** <br>
+`http://localhost:5000/home`
+<br><br>
+![Database Image](https://github.com/IzzetMustafaoglu/mongodbAndNodeJS/blob/main/images/my_blogs.png)
+<br>
+### **Edit Blogs** <br>
+`http://localhost:5000/home`
+<br><br>
+![Database Image](https://github.com/IzzetMustafaoglu/mongodbAndNodeJS/blob/main/images/edit_blog.png)
+<br>
+### **Users Database** <br>
+`http://localhost:5000/home`
+<br><br>
+![Database Image](https://github.com/IzzetMustafaoglu/mongodbAndNodeJS/blob/main/images/dt_users.png)
+<br>
+### **Blogs Database** <br>
+`http://localhost:5000/home`
+<br><br>
+![Database Image](https://github.com/IzzetMustafaoglu/mongodbAndNodeJS/blob/main/images/dt_blogs.png)
